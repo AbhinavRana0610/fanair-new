@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 52" width="190" height="52" fill="none">
+  <g transform="translate(10, 4)">
+    <!-- Tata Emblem -->
+    <g transform="translate(70, 0)">
+      <path d="M 15 2 C 7 2 1 7 1 13 C 1 19 7 24 15 24 C 23 24 29 19 29 13 C 29 7 23 2 15 2 Z" fill="none" stroke="#004B87" stroke-width="1.8"/>
+      <!-- T Wings -->
+      <path d="M 8 7 L 13 18 L 15 18 L 11 9 L 19 9 L 15 18 L 17 18 L 22 7 Z" fill="#004B87"/>
+    </g>
+    <!-- Text -->
+    <text x="85" y="37" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="9" font-weight="900" fill="#004B87" letter-spacing="1.2">TATA</text>
+    <text x="85" y="46" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="6.5" font-weight="800" fill="#004B87" letter-spacing="1">ADVANCED SYSTEMS</text>
+  </g>
+</svg>

@@ -1,0 +1,174 @@
+DirectoryIndex index.php index.html
+
+# --------------------------------------------------------
+# Modern Image MIME Types (AVIF & WebP)
+# --------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/avif-sequence .avifs
+  AddType image/webp .webp
+</IfModule>
+
+# --------------------------------------------------------
+# Enable GZIP Compression
+# --------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --------------------------------------------------------
+# Leverage Browser Caching
+# --------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# --------------------------------------------------------
+# Remove ETags (reduces request overhead)
+# --------------------------------------------------------
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# --------------------------------------------------------
+# Set Keep-Alive (optional; may already be set in server config)
+# --------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# --------------------------------------------------------
+# Force HTTPS (recommended)
+# --------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www.fanair.in -> https://fanair.in (single canonical host)
+  RewriteCond %{HTTP_HOST} ^www\.fanair\.in$ [NC]
+  RewriteRule ^(.*)$ https://fanair.in/$1 [R=301,L]
+
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # /index.php -> / (only when requested directly, so DirectoryIndex does not loop)
+  RewriteCond %{HTTP_HOST} ^fanair\.in$ [NC]
+  RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+  RewriteRule ^index\.php$ https://fanair.in/ [R=301,L]
+</IfModule>
+
+
+
+  # .html -> .php redirect
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^(.+?)\.html$ /$1.php [R=301,L,NE]
+  
+  
+  
+  <IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # .html -> .php redirect
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^(.+?)\.html$ /$1.php [R=301,L,NE]
+
+  # www.fanair.in -> https://fanair.in
+  RewriteCond %{HTTP_HOST} ^www\.fanair\.in$ [NC]
+  RewriteRule ^(.*)$ https://fanair.in/$1 [R=301,L]
+
+  # Force HTTPS
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# --------------------------------------------------------
+# 301: old non-slug file URLs -> new lowercase-hyphen URLs
+# --------------------------------------------------------
+<IfModule mod_alias.c>
+  Redirect 301 "/Axial Fan FanAir Product Catalogue (1).pdf" /axial-fan-fanair-product-catalogue.pdf
+  Redirect 301 "/Backward Inclined FanAir Product Catalogue.pdf" /backward-inclined-fanair-product-catalogue.pdf
+  Redirect 301 "/Dry & Wet Scrubber FanAir Product Catalogue.pdf" /dry-and-wet-scrubber-fanair-product-catalogue.pdf
+  Redirect 301 "/Fan Section FanAir Product Catalogue (1).pdf" /fan-section-fanair-product-catalogue.pdf
+  Redirect 301 "/Form MGT-7A_Fanair_2023-24 - Copy.pdf" /form-mgt-7a-fanair-2023-24.pdf
+  Redirect 301 "/Forward Curved Fan Catalogue.pdf" /forward-curved-fan-catalogue.pdf
+  Redirect 301 "/HVLS Fan FanAir Product Catalogue (1).pdf" /hvls-fan-fanair-product-catalogue.pdf
+  Redirect 301 "/Inline Fan FanAir Product Catalogue (1).pdf" /inline-fan-fanair-product-catalogue.pdf
+  Redirect 301 "/fanAir-catalogue.pdf" /fanair-catalogue.pdf
+  Redirect 301 "/img/16-Sep-2026-1789550129_4437439.webm" /img/about-fanair-video.webm
+  Redirect 301 "/img/FABI-F.avif" /img/fabi-f.avif
+  Redirect 301 "/img/FABQ-orig.avif" /img/fabq-orig.avif
+  Redirect 301 "/img/FABQ.avif" /img/fabq.avif
+  Redirect 301 "/img/Fanair MGT-7A_2024-25.pdf" /img/fanair-mgt-7a-2024-25.pdf
+  Redirect 301 "/img/amca_testing_lab_visual.avif" /img/amca-testing-lab-visual.avif
+  Redirect 301 "/img/cfd_simulation_visual.avif" /img/cfd-simulation-visual.avif
+  Redirect 301 "/img/cnc_laser_mfg_visual.avif" /img/cnc-laser-mfg-visual.avif
+  Redirect 301 "/img/delivery_logistics_visual.avif" /img/delivery-logistics-visual.avif
+  Redirect 301 "/img/fat-series - Copy.avif" /img/fat-series-copy.avif
+  Redirect 301 "/img/hero_bg_industrial_visual.avif" /img/hero-bg-industrial-visual.avif
+  Redirect 301 "/img/imageye___-_imgi_10_backward-fan.avif" /img/backward-fan-2.avif
+  Redirect 301 "/img/imageye___-_imgi_11_axial-fan.avif" /img/axial-fan.avif
+  Redirect 301 "/img/imageye___-_imgi_12_jet-fans.avif" /img/jet-fans.avif
+  Redirect 301 "/img/imageye___-_imgi_13_fan-section.avif" /img/fan-section.avif
+  Redirect 301 "/img/imageye___-_imgi_14_inline-fans.avif" /img/inline-fans.avif
+  Redirect 301 "/img/imageye___-_imgi_15_about-2.avif" /img/about-2.avif
+  Redirect 301 "/img/imageye___-_imgi_16_bikaner.avif" /img/bikaner.avif
+  Redirect 301 "/img/imageye___-_imgi_17_denso.avif" /img/denso.avif
+  Redirect 301 "/img/imageye___-_imgi_18_delhi-metro.avif" /img/delhi-metro.avif
+  Redirect 301 "/img/imageye___-_imgi_19_honda.avif" /img/honda.avif
+  Redirect 301 "/img/imageye___-_imgi_1_logo.avif" /img/fanair-logo.avif
+  Redirect 301 "/img/imageye___-_imgi_20_lumax.avif" /img/lumax.avif
+  Redirect 301 "/img/imageye___-_imgi_5_banner-1-new.avif" /img/banner-1-new-2.avif
+  Redirect 301 "/img/imageye___-_imgi_8_company-profile-2.avif" /img/company-profile-2.avif
+  Redirect 301 "/img/imageye___-_imgi_9_forward-curved.avif" /img/forward-curved-2.avif
+  Redirect 301 "/img/imgi_8_impulse-jet-fans.avif" /img/impulse-jet-fans.avif
+  Redirect 301 "/img/industrial_hvac_facility_visual.avif" /img/industrial-hvac-facility-visual.avif
+  Redirect 301 "/img/p-series - Copy.avif" /img/p-series-copy.avif
+  Redirect 301 "/img/research_analysis_visual.avif" /img/research-analysis-visual.avif
+  Redirect 301 "/img/support_engineering_visual.avif" /img/support-engineering-visual.avif
+  Redirect 301 "/jet Fan FanAir Product Catalouge.pdf" /jet-fan-fanair-product-catalogue.pdf
+  Redirect 301 "/smoke Exhaust Unit FanAir Product Catalogue (1).pdf" /smoke-exhaust-unit-fanair-product-catalogue.pdf
+</IfModule>
+
+# --------------------------------------------------------
+# Only one Home / About / Contact page: send old copies,
+# backups and test pages to the real page (301), and hide
+# PHP partials that would otherwise render as thin pages
+# --------------------------------------------------------
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/fanairf?(/.*)?$ /
+  RedirectMatch 301 ^/index-2\.php$ /
+  RedirectMatch 301 ^/index_backup_old\.php$ /
+  RedirectMatch 301 ^/temp_images\.php$ /
+  RedirectMatch 301 ^/thumb_test\.php$ /
+  RedirectMatch 301 ^/site-map-2\.php$ /site-map.php
+  RedirectMatch 404 ^/includes/
+  RedirectMatch 404 ^/(header|footer)\.php$
+</IfModule>

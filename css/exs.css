@@ -1,0 +1,288 @@
+
+h6
+{
+     height: 40px;
+     color: white;
+     padding-left: 10px;
+     padding-top: 9px;
+     width:auto;
+     font-style:normal;
+     text-align: left;
+     font-size: 20px;
+     font-weight: bold;
+
+
+     
+}
+.country
+{
+     margin-top: 10px;
+}
+.inner-box
+{
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border: 2px dotted black;
+      height: 40px;
+      line-height: 30px;
+      margin-top: 10px;
+     
+}
+.inner-box h5,
+.inner-box h4
+{
+    padding-top: 8px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-style: normal; 
+    height: 30px;
+     width:240px; 
+   font-weight: bold;
+    text-transform: uppercase;
+}
+
+.inner-box h5:hover,
+.inner-box h4:hover
+{
+   color:red;
+   display: block;
+}
+
+/*-----pro-desc---------*/
+
+
+.prd_page .he06 {
+    max-height: 440px;
+    width: 300px;
+    background-color: white;
+}
+.prd_page .he06 {
+   
+    min-height: 415px;
+}
+.he06 {
+    
+    overflow: hidden;
+}
+.m4 {
+    margin-top: 12px;
+}
+article, div, footer, h1, h2, h3, header, nav, ol, p, ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+b {
+    font-weight: bold;
+}
+
+
+ p {
+    font-size: 17px;
+}
+ .txt2 {
+    text-align: justify;
+}
+.fnt9 {
+    font-family: sans-serif;
+}
+.cl {
+    clear: both;
+}
+
+.ta, .txt2 {
+    text-align: justify;
+}
+
+.fnt9 {
+    font-family: sans-serif;
+}
+.isq table {
+    border: 0;
+}
+.fram table, .fram2 table {
+    margin-top: 7px;
+    width: 100%;
+    font-size: 14px;
+    max-width: 100%;
+}
+.w16 table, .w16 td {
+    max-width: 500px;
+}
+.t2 table, .t2 td, .t3 table, .t3 td, .w16 table, .w16 td {
+    overflow: auto;
+    border: 1px solid #999;
+}
+.brc1, .fram table, .fram2 table, table {
+    border-collapse: collapse;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+.ta, .txt2 {
+    text-align: justify;
+}
+.fnt9 {
+    font-family: sans-serif;
+}
+body {
+    font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif;
+    color: #6e6e6e;
+    background: #f2f2f2;
+}
+.bo2, .bo3, .fnt_n_p, body, h3 {
+    font-weight: 400;
+}
+body, p {
+    line-height: 24px;
+    font-size: 17px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.fram table, .fram2 table {
+    margin-top: 7px;
+    width: 100%;
+    font-size: 14px;
+    max-width: 100%;
+}
+.brc1, .fram table, .fram2 table, table {
+    border-collapse: collapse;
+}
+.isq table {
+    border: 0;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+.ta, .txt2 {
+    text-align: justify;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.brc1, .fram table, .fram2 table, table {
+    border-collapse: collapse;
+}
+.isq table tr td:first-child, .isq table tr th:first-child {
+    border-right: 1px solid #e3e3e3;
+    width: 35%;
+}
+.isq table tr td, .isq table tr th {
+    border: 0;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    padding: 8px 8px 9px 12px;
+    vertical-align: top;
+}
+.fram table tr td, .fram2 table tr td {
+    border: 1px solid #e3e3e3;
+    padding: 8px 8px 9px 12px;
+    text-align: left;
+}
+.fram td, .fram th {
+    max-width: 100%;
+}
+.w16 table, .w16 td {
+    max-width: 500px;
+}
+.t2 table, .t2 td, .t3 table, .t3 td, .w16 table, .w16 td {
+    overflow: auto;
+    border: 1px solid #999;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+b {
+    font-weight: bold;
+}
+
+.cu_p {
+    cursor: pointer;
+}
+.bg19 {
+    background: white;
+}
+.rcb {
+    text-shadow: 1px 1px #000;
+    right: 17px;
+    top: 0;
+    margin-top: -33px;
+    padding: 10px 7px;
+}
+.pa, .ps1, .rpa {
+    position: absolute;
+}
+
+.bo1, .btn7:hover, .close_vid span.cp, .etaEle h2, .srch2 input, .tooltip input {
+    font-weight: 300;
+}
+
+#close_vid span:hover, .clr3, .clr3 a, .clr3 a:hover, .clr57, .clr6, .clr9 a {
+    color: #fff;
+}
+.fnt17, .srch2 input, .tooltip input {
+    font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif;
+}
+.fnt6, .hd1 p {
+    font-size: 21px;
+}
+strong {
+    font-weight: bold;
+}
+
+.bg18 {
+    border-bottom: 14px solid #030303;
+    border-left: 10px solid transparent;
+    top: 0;
+    right: 102px;
+    margin-top: -32px;
+}
+
+.p30, .q2 {
+    padding: 4px 0 0;
+}
+
+
+.cl, .w33_btn div:nth-last-child(4), .w33_btn.cl.desc_onl {
+    clear: both;
+}
+
+
+/*-------ss safety----*/
+
+.c1 img
+{
+     width: 300px;
+     height: 400px;
+}
+
+/* Footer column titles (were h4): keep Bootstrap's heading line-height */
+.footer-agency .footer-heading,
+.footer-agency__grid .footer-heading
+{
+    line-height: 1.2;
+}

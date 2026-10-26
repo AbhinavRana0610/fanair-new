@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" width="220" height="54" fill="none">
+  <g transform="translate(6, 4)">
+    <!-- NeST / SFO Emblem -->
+    <g transform="translate(0, 5)">
+      <ellipse cx="20" cy="18" rx="18" ry="11" stroke="#E31E24" stroke-width="3.5" fill="none" transform="rotate(-25, 20, 18)"/>
+      <ellipse cx="20" cy="18" rx="8" ry="13" fill="#004D91" transform="rotate(20, 20, 18)"/>
+    </g>
+    <!-- Text Lines -->
+    <text x="48" y="19" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14.5" font-weight="900" fill="#004B87" letter-spacing="-0.3">SFO Technologies</text>
+    <text x="75" y="29" font-family="Arial, sans-serif" font-size="7.5" font-weight="600" fill="#E31E24">A NeST Group Company</text>
+    <text x="48" y="42" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="6.5" font-weight="700" fill="#004B87" letter-spacing="1.4">CREATING INNOVATIVE SOLUTIONS</text>
+  </g>
+</svg>

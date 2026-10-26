@@ -1,0 +1,70 @@
+﻿<!-- Floating Sidebars -->
+  <div class="floating-side-bar floating-bar-left">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener" class="floating-btn btn-youtube" data-tooltip="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener" class="floating-btn btn-instagram" data-tooltip="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="floating-btn btn-linkedin" data-tooltip="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" class="floating-btn btn-facebook" data-tooltip="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+
+  <div class="floating-side-bar floating-bar-right">
+    <div class="floating-btn btn-whatsapp" id="whatsappFloatingBtn" data-tooltip="WhatsApp Chat" onclick="toggleWhatsAppModal(true)">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+    <a href="tel:+919811347199" class="floating-btn btn-phone" data-tooltip="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <div class="floating-btn btn-email" id="emailFloatingBtn" data-tooltip="Send Email" onclick="toggleEmailModal(true)">
+      <i class="fas fa-envelope"></i>
+    </div>
+    <div class="floating-btn btn-backtotop" id="floatingBackToTop" data-tooltip="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+  </div>
+
+  <!-- WhatsApp Modal Popup -->
+  <div class="whatsapp-modal-overlay" id="whatsappModal" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 99999999; display: none; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;">
+    <div class="whatsapp-modal-card" style="background: #ffffff; width: 100%; max-width: 440px; border-radius: 24px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35); position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box;">
+      <button type="button" class="whatsapp-modal-close" id="closeWhatsappModal" aria-label="Close" onclick="toggleWhatsAppModal(false)" style="position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.25); border: none; color: #ffffff; font-size: 24px; line-height: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">&times;</button>
+      <div class="whatsapp-modal-header" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); padding: 24px 24px 20px; display: flex; align-items: center; gap: 16px; color: #ffffff;">
+        <div class="whatsapp-icon-circle" style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; border: 2px solid rgba(255, 255, 255, 0.4); color: #ffffff;">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 2px; color: #ffffff; font-family: 'Inter', sans-serif;">Start WhatsApp Chat</h3>
+          <p style="font-size: 0.8rem; margin: 0; color: rgba(255,255,255,0.9); font-weight: 500; font-family: 'Inter', sans-serif;">Fan Air India Pvt. Ltd. � Online Support</p>
+        </div>
+      </div>
+      <form class="whatsapp-modal-form" id="whatsappForm" style="padding: 24px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box; background: #ffffff;">
+        <div class="form-group-custom" style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
+          <label for="wa_name" style="font-size: 12px; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif;">Your Name <span style="color:#d9251d;">*</span></label>
+          <input type="text" id="wa_name" placeholder="Enter your full name" required style="width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #E2E8F0; font-size: 14px; color: #0F172A; background: #F8FAFC; outline: none; box-sizing: border-box;">
+        </div>
+        <div class="form-group-custom" style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
+          <label for="wa_phone" style="font-size: 12px; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif;">Mobile Number <span style="color:#d9251d;">*</span></label>
+          <input type="tel" id="wa_phone" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}" style="width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #E2E8F0; font-size: 14px; color: #0F172A; background: #F8FAFC; outline: none; box-sizing: border-box;">
+        </div>
+        <div class="form-group-custom" style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
+          <label for="wa_email" style="font-size: 12px; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif;">Email Address</label>
+          <input type="email" id="wa_email" placeholder="Enter your email address" style="width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #E2E8F0; font-size: 14px; color: #0F172A; background: #F8FAFC; outline: none; box-sizing: border-box;">
+        </div>
+        <div class="form-group-custom" style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
+          <label for="wa_message" style="font-size: 12px; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif;">Requirement / Message <span style="color:#d9251d;">*</span></label>
+          <textarea id="wa_message" rows="3" placeholder="Describe your product or project requirement..." required style="width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #E2E8F0; font-size: 14px; color: #0F172A; background: #F8FAFC; outline: none; box-sizing: border-box; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="whatsapp-submit-btn" style="margin-top: 8px; width: 100%; padding: 14px 20px; border-radius: 12px; border: none; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #ffffff; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);">
+          <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
+          <span>Send Message on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  

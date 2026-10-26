@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 52" width="180" height="52" fill="none">
+  <g transform="translate(10, 2)">
+    <!-- Knorr Emblem -->
+    <rect x="58" y="2" width="44" height="24" rx="3" fill="#002D62"/>
+    <!-- Double brackets and K -->
+    <path d="M 68 8 C 65 11 65 17 68 20" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 72 6 C 68 10 68 18 72 22" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Center K -->
+    <text x="80" y="20" font-family="'Arial Black', Arial, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">K</text>
+    <!-- Right brackets -->
+    <path d="M 88 6 C 92 10 92 18 88 22" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 92 8 C 95 11 95 17 92 20" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Text -->
+    <text x="80" y="44" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial Black', Arial, sans-serif" font-size="13" font-weight="900" fill="#002D62" letter-spacing="1.5">KNORR-BREMSE</text>
+  </g>
+</svg>
